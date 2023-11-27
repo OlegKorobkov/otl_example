@@ -1,0 +1,100 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[pipenv]
+install_search_all_sources = true
+
+[requires]
+python_version = "3.10"
+
+[dev-packages]
+django-extensions = "==3.1.5"
+freezegun = "==1.2.2"
+pytest = "==7.1.3"
+pytest-cov = "==4.0.0"
+pytest-django = "==4.5.2"
+pytest-lazy-fixture = "==0.6.3"
+pytest-mock = "==3.10.0"
+pytest-xdist = "==2.5.0"
+responses = "==0.23.1"
+ipython = "==8.14.0"
+ruff = "==0.0.292"
+black = "==23.9.1"
+
+[packages]
+##### async #####
+aioredis = "~=1.2"  # updating to >2.0 needs to update a lot of code
+aiohttp = "==3.8.3"
+async-timeout = "==4.0.2"
+asyncpg = "==0.26.0"
+channels = "==3.0.5"
+channels-redis = "==3.4.1"
+uvloop = "==0.17.0"
+websockets = "==8.0"
+rx = "~=1.6"
+aiohttp-session = "==2.11.0" # https://github.com/aio-libs/aiohttp-session, 207 Stars
+#
+##### django #####
+django = "~=3.2"
+psycopg2-binary = "==2.9.4" # this is pure driver for django (no direct access)
+django-redis = "~=5.2.0"
+django-allauth = "==0.44.0"
+django-defender = "==0.9.5"
+django-polymorphic = "==3.1"
+django-ratelimit = "==3.0.1"
+django-rest-auth = "==0.8.2"
+djangorestframework = "~=3.12"
+django-postgres-extra = "==2.0.6"
+django-elasticsearch-dsl = "==7.2.2" # https://github.com/django-es/django-elasticsearch-dsl, 892 Stars
+django-enum-choices = "==2.1.4" # https://github.com/HackSoftware/django-enum-choices, 69 Stars
+django-graphql-jwt = "==0.3.1" # https://github.com/flavors/django-graphql-jwt, 771 Stars
+django-pickling = "==1.0" # https://github.com/Suor/django-pickling, 71 Stars
+#
+##### graphql #####
+graphene = "~=2.1"
+graphql-core = "~=2.3"
+graphene-django = "==2.15.0"
+graphene-file-upload = "==1.2.2" # https://github.com/lmcgartland/graphene-file-upload, 165 Stars
+graphql-ws = "==0.3.0" # https://github.com/graphql-python/graphql-ws, 198 Stars
+promise = "==2.3" # https://github.com/syrusakbary/promise, 252 Stars
+stackprinter = "==0.2.3" # https://github.com/cknd/stackprinter, 1k Stars
+secure-graphene = {ref = "7bd25ae7387863b6633649af1e58bb06e45f74ba", git = "https://github.com/manesioz/secure-graphene.git", index="pypi"}
+#
+##### infrastracture #####
+#
+opentelemetry-api = "*"
+opentelemetry-instrumentation = "<=0.42b0"
+opentelemetry-instrumentation-celery = "*"
+opentelemetry-instrumentation-django = "*"
+opentelemetry-instrumentation-wsgi = "<=0.42b0"
+opentelemetry-sdk = "*"
+opentelemetry-semantic-conventions = "<=0.42b0"
+opentelemetry-util-http = "<=0.42b0"
+##### project dependencies #####
+amqp = "*"
+celery = "~=5.2.7"
+#
+##### python helpers #####
+jsonschema = "==4.16.0"
+pydantic = "==1.10.2"
+pyjwt = "==1.7.1"
+python-dotenv = "==0.21.0"
+requests = "==2.28.1"
+asttokens = "==2.0.8"
+typing-extensions = "==4.4.0"
+python-magic = "==0.4.27"
+filetype = "==1.1.0"
+pydub = "==0.25.1"
+scipy = "==1.9.2"
+faker = "==15.1.1" # this package good for testing, but not for production code. isn't it?
+timezonefinder = "==6.1.3" # https://github.com/jannikmi/timezonefinder, 353 Stars
+openpyxl = "==3.0.10" # https://foss.heptapod.net/openpyxl/openpyxl, no stars, excel
+xlrd = "==2.0.1" # used because soundreef manifest is old xls
+deepdiff = "==6.2.2"
+semantic-version = "2.10.0"
+boto3 = "==1.28.15"
+mtranslate = "==1.8"
+opentelemetry-instrumentation-psycopg2 = "*"
+opentelemetry-exporter-otlp-proto-grpc = "*"
