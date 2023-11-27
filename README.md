@@ -10,4 +10,5 @@
 https://github.com/OlegKorobkov/otl_example/blob/master/links/schema.py#L91
 
 Для автотрейсинга psycopg2-binary необходимо подключать с параметром skip_dep_check=True, иначе Psycopg2Instrumentor думает, что psycopg2 не установлен
+
 Psycopg2Instrumentor().instrument(skip_dep_check=True)
